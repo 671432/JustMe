@@ -1,0 +1,33 @@
+.hero {
+  background-image: url('../assets/hero.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw; 
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* optional for contrast */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.page-content {
+  padding: 2rem;
+}
