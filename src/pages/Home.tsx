@@ -28,8 +28,9 @@ export function Home() {
         View My Projects
       </button>
       <p>
-        Scroll around to learn more about who I am, what I’ve built, and what
-        I’m learning next.
+        Education vise I've obtained a Vocational Certificate as an Data
+        Electronics Technician in 2018, and an Bachelor's degree in Information
+        Technology in 2025.
       </p>
     </div>
   );

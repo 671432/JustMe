@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;   /* Fix to viewport */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -9,8 +9,6 @@
   padding: 1rem 2rem;
   background: transparent; /* or add color if you want */
   z-index: 1000; /* on top of everything */
-  height: 60px;  /* fixed height */
-  box-sizing: border-box;
 }
 
 .navbar-left {
