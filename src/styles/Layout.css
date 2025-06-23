@@ -19,7 +19,7 @@
   max-width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1.5rem, 5vw, 3rem); /* 👈 Auto-scales with screen size */
+  font-size: clamp(1.5rem, 5vw, 3rem);
   line-height: 1.2;
   margin: 0;
   padding: 2vw;

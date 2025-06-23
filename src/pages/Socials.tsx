@@ -10,7 +10,7 @@ export function Socials() {
           background: rgba(255, 255, 255, 0.05);
           border: 2px solid rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
-          max-width: 400px;
+          max-width: 300px;
           margin: 2rem auto;
         }
         h2 {
@@ -44,7 +44,6 @@ export function Socials() {
       `}</style>
 
       <div className="container">
-        <h2>Social & Projects</h2>
         <button
           className="youtube"
           onClick={() =>

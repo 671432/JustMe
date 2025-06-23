@@ -4,7 +4,7 @@ export function AboutMe() {
       <p style={{ color: "red" }}>
         This page is still a work in progress and will be updated... eventually.
       </p>
-      <p>Who am I?</p>
+      <h2>Who am I?</h2>
       <p>
         Just a normal nerdy guy who figured out in 2019 that programing wasn't
         as boring as he first thought, and learned more and more about how much
@@ -17,7 +17,7 @@ export function AboutMe() {
         able to understand more about how something works in the background.
       </p>
       <br />
-      <p>What I do? </p>
+      <h2>What I do? </h2>
       <p>
         I tend to stick my nose into almost everything tech related, be it as
         simple as a 2005 desktop being slow and it most likely just being an
@@ -45,7 +45,7 @@ export function AboutMe() {
         recently a few rounds of Zombies in Black Ops 3 with my friends.
       </p>
       <br />
-      <p>My hobbies and some nerd info: </p>
+      <h2>My hobbies and some nerd info: </h2>
       <p>
         Gaming, Anime, Understanding how games and programs work and trying to
         find exploits or visual bugs, also enjoy creating cheat tables, messing
