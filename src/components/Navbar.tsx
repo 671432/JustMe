@@ -5,7 +5,7 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src="./logo.jpg" alt="JustMe logo" className="logo-img" />
+        <img src="/JustMe/logo.jpg" alt="JustMe logo" className="logo-img" />
         <div className="site-name">JustMe</div>
       </div>
       <ul className="navbar-right">

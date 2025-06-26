@@ -10,7 +10,7 @@ type LayoutProps = {
 
 export function Layout({ children, pageTitle }: LayoutProps) {
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  const isHome = location.pathname.replace("/JustMe", "") === "/";
 
   return (
     <>
