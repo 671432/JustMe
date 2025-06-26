@@ -1,7 +1,7 @@
 import { ProjectDropdown } from "../components/ProjectDropdown";
 
 // image imports
-import placeHolderImg from "../assets/placeholder_img.png";
+import placeHolderImg from "../../src/assets/placeholder_img.png";
 import frequencyImg1 from "../assets/projects/frequency/createGame.png";
 import frequencyImg2 from "../assets/projects/frequency/game1.png";
 import frequencyImg3 from "../assets/projects/frequency/game2.png";
@@ -387,6 +387,13 @@ export function Projects() {
           version properly using typescript. my experiance with typescript is
           and was somewhat limited, but I used this as a learning experiance.
         </p>
+        <button
+          onClick={() =>
+            window.open("https://github.com/671432/JustMe", "_blank")
+          }
+        >
+          Code: Portfolio Website
+        </button>
       </ProjectDropdown>
     </div>
   );
