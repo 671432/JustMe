@@ -1,25 +1,25 @@
-import React from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src="/logo.jpg" alt="JustMe logo" className="logo-img" />
+        <img src="./logo.jpg" alt="JustMe logo" className="logo-img" />
         <div className="site-name">JustMe</div>
       </div>
       <ul className="navbar-right">
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/projects">Projects</a>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <a href="/about">About Me</a>
+          <Link to="/about">About Me</Link>
         </li>
         <li>
-          <a href="/socials">Socials & Projects</a>
+          <Link to="/socials">Socials & Projects</Link>
         </li>
       </ul>
     </nav>
