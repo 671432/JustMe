@@ -1,11 +1,13 @@
 {
   "name": "justme",
   "main": "src/index.tsx",
-  "homepage": "https://671432.github.io/JustMe/",
+  "homepage": "https://671432.github.io/JustMe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
