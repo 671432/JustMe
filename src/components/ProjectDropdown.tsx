@@ -61,7 +61,7 @@ export function ProjectDropdown({
                   alt={`project image ${index + 1}`}
                   style={{
                     maxWidth: "100%",
-                    maxHeight: "200px",
+                    maxHeight: "auto",
                     objectFit: "cover",
                     borderRadius: "4px",
                   }}
