@@ -1,3 +1,7 @@
+# JustMe
+
+Website: https://671432.github.io/JustMe/
+
 # info
 
 just creating a little portfolio website to show who I am and what projects I have worked on.
