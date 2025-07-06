@@ -8,7 +8,8 @@ just creating a little portfolio website to show who I am and what projects I ha
 
 # Known issues
 
-- styling isn't being appliedd on iOS devices
+- styling isn't being applied on iOS devices
+- copy/pasting the link to anything other then "671432.github.io/JustMe/" results in a page not found error ( for example: 671432.github.io/JustMe/projects results in an error)
 
 # Planned work
 
