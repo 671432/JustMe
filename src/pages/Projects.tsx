@@ -30,6 +30,8 @@ import marchingImg4 from "../assets/projects/marchingAlgorithms/head.png";
 
 import GameImg1 from "../assets/projects/2DGame/img.png";
 
+import trafficImg1 from "../assets/projects/trafficLight/trafficLight.png";
+
 export function Projects() {
   return (
     <div
@@ -334,7 +336,7 @@ export function Projects() {
           code: Hotel System
         </button>
       </ProjectDropdown>
-      <ProjectDropdown title="Traffic Light" images={[placeHolderImg]}>
+      <ProjectDropdown title="Traffic Light" images={[trafficImg1]}>
         <h2> what is it? </h2>
         <p>
           in Visual Studio. 2D visualization of an intersection, using bitmaps.{" "}
