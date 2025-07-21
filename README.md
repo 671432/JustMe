@@ -15,6 +15,9 @@ just creating a little portfolio website to show who I am and what projects I ha
 
 - make the bottom part of the hero image scroll with the navbar
 - add a link to the website title that goes to the homepage
-- replace the placeholder images
 - improove the styling for the page titles
 - add a layout for mobile devices
+
+# Noteworthy updates after initial publishing
+
+- replace the placeholder images

@@ -30,6 +30,19 @@ import marchingImg4 from "../assets/projects/marchingAlgorithms/head.png";
 
 import GameImg1 from "../assets/projects/2DGame/img.png";
 
+import WPF1 from "../assets/projects/HotelSystem/WPF.png";
+import Razor1 from "../assets/projects/HotelSystem/RazorHome.png";
+import Razor2 from "../assets/projects/HotelSystem/RazorMaintenance.png";
+import Razor3 from "../assets/projects/HotelSystem/RazorRoomService.png";
+import Razor4 from "../assets/projects/HotelSystem/RazorCleaning.png";
+import ASP1 from "../assets/projects/HotelSystem/ASPHome.png";
+import ASP2 from "../assets/projects/HotelSystem/ASPRegister.png";
+import ASP3 from "../assets/projects/HotelSystem/ASPLogin.png";
+import ASP4 from "../assets/projects/HotelSystem/ASPRooms.png";
+import ASP5 from "../assets/projects/HotelSystem/ASPRoomsFilter.png";
+import ASP6 from "../assets/projects/HotelSystem/ASPBooking.png";
+import ASP7 from "../assets/projects/HotelSystem/ASPReservation.png";
+
 import trafficImg1 from "../assets/projects/trafficLight/trafficLight.png";
 
 export function Projects() {
@@ -270,7 +283,7 @@ export function Projects() {
           A "series" of projects, started with the simple 2D visuals (2D view)
           to understand the differences between marching squares and marching
           tetrahedrons. continuing to the next project (Ball.obj) to create and
-          save a 3DD .obj file of a sphere. lastly ending with the CT-Scan
+          save a 3D .obj file of a sphere. lastly ending with the CT-Scan
           project which takes about 2-3 minutes to create and save a 3D .obj
           file of the combined CT-scans.{" "}
         </p>
@@ -312,19 +325,22 @@ export function Projects() {
           code: CT-Scan{" "}
         </button>
       </ProjectDropdown>
-      <ProjectDropdown title="Hotel System" images={[placeHolderImg]}>
+      <ProjectDropdown title="Hotel System" images={[WPF1, Razor1, Razor2, Razor3, Razor4, ASP1, ASP2, ASP3, ASP4, ASP5, ASP6, ASP7]}>
         <h2>what is it? </h2>
         <p>
-          Visual Studio. 3 projects: ASP for Customer project, Razor for Service
+          3 .NET projects: ASP for Customer project, Razor for Service
           staff, WPF for Front Desk.
         </p>
         <h2>what did I do?</h2>
         <p>
           This was a 3-man project and I did the front-end for all 3 projects,
-          as well as doing the WPF project on my own, and about half of the ASP
+          as well as doing the ASP project on my own, and about half of the WPF
           project.
         </p>
-        <p>Frameworks & Languages: Visual Studio, ASP, Razor, WPF, C++ </p>
+        <p>Frameworks & Languages: Visual Studio, ASP, Razor, WPF, C# </p>
+        <p style={{ color: "red" }}>
+          I quickly created dummy data to take the screenshots as the DB is out of comission, so some aspects don't work like they originally did. <br></br> as an example; in the ASP project, the "Book Room" button would originally become unavailable when a room was "Occupied".
+        </p>
         <button
           onClick={() =>
             window.open(
