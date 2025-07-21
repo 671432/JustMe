@@ -1,7 +1,7 @@
 import { ProjectDropdown } from "../components/ProjectDropdown";
 
 // image imports
-import placeHolderImg from "../assets/placeholder_img.png";
+//import placeHolderImg from "../assets/placeholder_img.png"; //comment out when no project uses it
 import frequencyImg1 from "../assets/projects/frequency/createGame.png";
 import frequencyImg2 from "../assets/projects/frequency/game1.png";
 import frequencyImg3 from "../assets/projects/frequency/game2.png";
