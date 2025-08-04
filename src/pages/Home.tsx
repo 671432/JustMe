@@ -16,11 +16,13 @@ export function Home() {
       }}
     >
       <p style={{ marginBottom: "2rem" }}>
-        I enjoy a bit of everything and have tried my hands at almost everything
-        tech related, frequently revisiting cheat tables/trainers with point
-        maps, dabbling in basic modding, writing scripts to automate repetitive
-        tasks, trying my hands at game making, 3D printing, creating some
-        smaller programs, and more that can be seen in my Projects page.
+        I’m a versatile developer with a broad interest in technology. <br></br>
+        Over the years, I’ve explored a wide range of tech-related projects — 
+        from scripting tools that automate daily tasks to creating small applications, 
+        experimenting with game development, and working with 3D modeling and printing. <br></br> 
+        I enjoy learning new frameworks and tools, and I’m especially drawn to building 
+        solutions that make complex systems more efficient or user-friendly. 
+        Many of my past projects are available on the Projects page.
       </p>
       <button className="center-button" onClick={() => navigate("/projects")}>
         View My Projects

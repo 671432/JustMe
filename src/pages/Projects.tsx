@@ -355,7 +355,7 @@ export function Projects() {
       <ProjectDropdown title="Traffic Light" images={[trafficImg1]}>
         <h2> what is it? </h2>
         <p>
-          in Visual Studio. 2D visualization of an intersection, using bitmaps.{" "}
+          a C++ project using Visual Studio. 2D visualization of an intersection, using bitmaps.{" "}
         </p>
         <h2>what did I do? </h2>
         <p>

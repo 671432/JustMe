@@ -14,6 +14,8 @@ export function Layout({ children, pageTitle }: LayoutProps) {
 
   return (
     <>
+    <div className="hero-filler" />
+
       <Navbar />
       <div className="hero">
         {isHome ? (
@@ -29,6 +31,7 @@ export function Layout({ children, pageTitle }: LayoutProps) {
           </div>
         ) : null}
       </div>
+      <div className="hero-filler-space" />
       <main className="page-content">{children}</main>
     </>
   );

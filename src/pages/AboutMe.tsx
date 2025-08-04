@@ -1,9 +1,6 @@
 export function AboutMe() {
   return (
     <div>
-      <p style={{ color: "red" }}>
-        This page is still a work in progress and will be updated... eventually.
-      </p>
       <h2>Who am I?</h2>
       <p>
         Just a normal nerdy guy who figured out in 2019 that programing wasn't

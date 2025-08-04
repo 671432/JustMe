@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .hero {
   background-image: url('../assets/hero.png');
   background-size: cover;
@@ -12,6 +23,7 @@
   text-align: center;
   color: rgb(255, 105, 180);
   padding: 1rem;
+  z-index: 2;
 }
 
 .hero-content {
@@ -36,6 +48,65 @@
   font-weight: bold;
 }
 
+.hero-filler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5rem;
+  background-image: url('../assets/navbar.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep layout spacing for content so things don’t jump */
+.hero-filler-space {
+  height: 4.5rem; /* Same as .hero-filler-bg */
+}
+
 .page-content {
   padding: 2rem;
 }
+
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.socialButtons {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.youtube { background-color: #FF0000; }
+.github { background-color: #0D1117; }
+.linkedin, .shows { background-color: #0A66C2; }
+.projects { background-color: #1f1f1f; }
