@@ -20,5 +20,5 @@ just creating a little portfolio website to show who I am and what projects I ha
 - replaced the placeholder images
 - added a link to the website title that goes to the homepage
 - made the bottom part of the hero image scroll with the navbar
-- addd a layout for mobile devices (changes depending on screen width)
+- added a layout for mobile devices (changes depending on screen width)
 - styling of the background is now being applied to embeded pages and potentially also iOS devices
