@@ -164,7 +164,7 @@ export function Projects() {
         <button
           onClick={() =>
             window.open(
-              "https://github.com/671432/Oblig6?tab=readme-ov-file",
+              "https://github.com/671432/SolarSystem",
               "_blank"
             )
           }
@@ -174,7 +174,7 @@ export function Projects() {
         <button
           onClick={() =>
             window.open(
-              "https://671432.github.io/Oblig6/PlanetJumper/index.html",
+              "https://671432.github.io/SolarSystem/PlanetJumper/index.html",
               "_blank"
             )
           }
