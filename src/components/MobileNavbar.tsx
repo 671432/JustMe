@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/MobileNavbar.css"; // You can style this separately
+import "../styles/MobileNavbar.css";
 
 export function MobileNavbar() {
   const [open, setOpen] = useState(false);

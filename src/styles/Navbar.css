@@ -8,7 +8,7 @@
   align-items: center;
   padding: 1rem 2rem;
   background: transparent;
-  z-index: 1000; /* on top of everything */
+  z-index: 1000;
 }
 
 .navbar-left {

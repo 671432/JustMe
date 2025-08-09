@@ -102,16 +102,20 @@ export function Projects() {
         <h2>Main frameworks & languages</h2>
         <p>React, React Native, Typescript, Javascript, Svelte, Java.</p>
 
-        <button
-          onClick={() =>
-            window.open(
-              "https://tutti-game-development-preview.web.app/games",
-              "_blank"
-            )
-          }
-        >
-          Demo: Frequency Controller{" "}
-        </button>
+        <div className="button-with-note">
+          <button className="disabled"
+              onClick={() =>
+                window.open(
+                  "https://tutti-game-development-preview.web.app/games",
+                  "_blank"
+                )
+              }
+            >
+              Demo: Frequency Controller{" "}
+          </button>
+          <p className="note"> ← temporarilly disabled whilest I figure out a way to autologgin through the button</p>
+        </div>
+        
         <p style={{ color: "red" }}>
           this link or some aspects of the page might brake as the firebase DB
           used was for testing purposes and will eventually be removed
