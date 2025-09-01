@@ -64,10 +64,6 @@ export function Projects() {
           never planned on releasing them thus not needing to make them
           understandable to anyone besides myself ;)
         </h2>
-        <p style={{ color: "red" }}>
-          I'll add better descriptions/info to the projects once I got some more
-          time.
-        </p>
       </div>
 
       <ProjectDropdown
@@ -113,7 +109,8 @@ export function Projects() {
             >
               Demo: Frequency Controller{" "}
           </button>
-          <p className="note"> ← temporarilly disabled whilest I figure out a way to autologgin through the button</p>
+          <p className="note"> ← </p>
+          <p className="note"> temporarilly disabled whilest I figure out a way to autologgin through the button</p>
         </div>
         
         <p style={{ color: "red" }}>

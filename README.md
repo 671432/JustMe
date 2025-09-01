@@ -14,6 +14,15 @@ just creating a little portfolio website to show who I am and what projects I ha
 # Planned work
 
 - improove the styling for the page titles
+- increase page title size
+- add "something" (animation, images, dunno) on both sides of the title for bedazzeling.
+- fix the dropdown and image sizing
+- add some fx (steam card hover)
+- add icon above the dropdown relating to the project (G Major Key for frequency project, etc)
+- decrease dropdown bar lenght
+- add fancy things on the side of the dropdowns that relates to the chosen project
+- add an option to change the dropdown layout (side by side, 1by1, etc)
+- fix the "Socials" page
 
 # Noteworthy updates after initial publishing
 

@@ -58,5 +58,8 @@
 }
 
 .navbar-right li a:hover {
-  text-decoration: underline;
+  background-color: #81494e;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2rem;
 }
