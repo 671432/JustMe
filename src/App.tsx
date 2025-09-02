@@ -23,7 +23,7 @@ function App() {
         <Route
           path="/projects"
           element={
-            <Layout pageTitle="Projects">
+            <Layout pageTitle=" ▒ Projects ▒ ">
               <Projects />
             </Layout>
           }
@@ -31,7 +31,7 @@ function App() {
         <Route
           path="/about"
           element={
-            <Layout pageTitle="About Me">
+            <Layout pageTitle=" ▒ About Me ▒ ">
               <AboutMe />
             </Layout>
           }
@@ -39,7 +39,7 @@ function App() {
         <Route
           path="/socials"
           element={
-            <Layout pageTitle="Socials & Projects">
+            <Layout pageTitle=" ▒ Socials & Projects ▒ ">
               <Socials />
             </Layout>
           }

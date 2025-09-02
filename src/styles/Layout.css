@@ -40,23 +40,26 @@ html, body {
 
 .hero-content {
   background-color: #1c1c1c75;
-  max-width: 90%;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: clamp(1.5rem, 5vw, 3rem);
-  line-height: 1.2;
   margin: 0;
-  padding: 2vw;
-  border-radius: 5px;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-bottom: 0.5vw;
+  border-radius: 1rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2vw, 1rem);
+  display: inline-block;
+  width: fit-content;  
+  max-width: 100%;
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.75vw, 0.75rem);
   font-weight: bold;
 }
 
@@ -79,10 +82,20 @@ html, body {
   height: 4.5rem; /* Same as .hero-filler-bg */
 }
 
+.dropdown-container{
+  display: block;
+  padding-right: 20%;
+  padding-left: 20%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .page-content {
   padding: 2rem;
 }
 
+/* container for social buttons */
 .container {
   text-align: center;
   padding: 40px;
@@ -111,11 +124,19 @@ html, body {
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
-  border: none;
   color: white;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-family: 'Poppins', sans-serif;
+}
+
+.socialButtons:hover {
+  border-color: #ffffff;
+}
+
+.socialButtons:focus,
+.socialButtons:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .youtube { background-color: #FF0000; }

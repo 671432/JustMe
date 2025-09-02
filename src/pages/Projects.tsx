@@ -47,22 +47,12 @@ import trafficImg1 from "../assets/projects/trafficLight/trafficLight.png";
 
 export function Projects() {
   return (
-    <div
-      style={{
-        display: "block",
-        padding: "1rem",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "1rem",
-      }}
-    >
+    <div className="dropdown-container">
       <div style={{ width: "100%", marginBottom: "2rem" }}>
         <h2>
           This Project page doesn't have every project I've worked on, it just
           has what I feel has enough work put into it to be presentable to
-          others. A few of my projects are made in a very confusing way since I
-          never planned on releasing them thus not needing to make them
-          understandable to anyone besides myself ;)
+          others.
         </h2>
       </div>
 
