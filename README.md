@@ -24,6 +24,10 @@ just creating a little portfolio website to show who I am and what projects I ha
 - add an option to change the dropdown layout (side by side, 1by1, etc)
 - fix the "Socials" page
 
+# Idea dump
+
+- change the project page to use animations and fully change the window on every scroll to reflect each project individually (new background image, condense everything to fitt inside the screen)
+
 # Noteworthy updates after initial publishing
 
 - replaced the placeholder images
