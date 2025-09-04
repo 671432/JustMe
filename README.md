@@ -10,7 +10,6 @@ just creating a little portfolio website to show who I am and what projects I ha
 
 - styling of the buttons isn't being applied on iOS devices
 - copy/pasting the link to anything other then "671432.github.io/JustMe/" results in a page not found error ( for example: 671432.github.io/JustMe/projects results in an error)
-- scaling for mobile devices is messed up on the projects page
 
 # Planned work
 
@@ -33,3 +32,4 @@ just creating a little portfolio website to show who I am and what projects I ha
 - made the bottom part of the hero image scroll with the navbar
 - added a layout for mobile devices (changes depending on screen width)
 - styling of the background is now being applied to embeded pages and potentially also iOS devices
+- fixed scaling for mobile devices after changing dropdown size

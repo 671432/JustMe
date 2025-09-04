@@ -90,6 +90,9 @@ button:focus-visible {
 
 .note {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: clamp(0.75rem, 1.75vw, 1.25rem);
   color: #ff0000;
+  min-width: 0;      
+  overflow-wrap: break-word; 
+  white-space: normal;
 }
