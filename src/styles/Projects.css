@@ -1,0 +1,144 @@
+/* Make the page (body) the one and only scroll container with snapping */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; /* optional */
+}
+
+/* Remove the default padding of Layout's main only on the Projects page */
+.page-content .projects-root {
+  /* your Layout gives main.page-content { padding: 2rem } — cancel it here */
+  margin: -2rem;           /* neutralize the parent padding */
+}
+
+/* Every full-screen section snaps */
+.snap {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.hero-section,
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100svh;
+  background: #111; /* fallback */
+  background-size: cover;       /* fill container */
+  background-position: center;  /* center image */
+  background-repeat: no-repeat; /* prevent repetition */
+}
+
+.project-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  min-width: 60vh;
+  height: 90%;
+  background: rgba(20,20,20,0.35);
+  border-radius: 12px;
+  padding: 2rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+/* Text section scrolls if too long */
+.project-text {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+/* Gallery row container */
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 50vh; /* scale images */
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: hidden;
+  max-width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap;
+  max-height: 100vh; /* Limit row height */
+  overflow: hidden;
+}
+
+.images img {
+  flex-shrink: 0;
+  max-height: 15vh;
+  max-width: clamp(200px, 30vw, 400px);
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0,0,0,.5);
+}
+
+/* Dots below */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #777;
+  opacity: 0.7;
+}
+
+.dot.active {
+  background: #FF69B4;
+  opacity: 1;
+}
+
+/* Prev/Next buttons below */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.controls button {
+  background: rgba(255,255,255,0.18);
+  border: none;
+  color: #FF69B4;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+/* Mobile: images stack vertically */
+@media (max-width: 768px) {
+  .images {
+    flex-direction: column;
+    max-height: 40vh;
+  }
+
+  .images img {
+    max-width: 86vw;
+    max-height: 40vh;
+  }
+}
+

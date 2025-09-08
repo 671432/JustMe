@@ -1,3 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   font-weight: 500;
   color: #ffffff;
@@ -7,27 +32,22 @@ a:hover {
   color: #FF69B4;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: rgb(255, 105, 180);
 }
 
-h2 {
-  color: rgb(255, 105, 180);
+h2, h3 {
+  color: #ff69b4;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  margin-top: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(0.75rem, 2.5vw, 2rem);
 }
 
 p {
-  font-size: 1.2em;
+  font-size: clamp(0.5rem, 1.25vw, 1.25rem);
+  line-height: 1.4;
   font-weight: bolder;
 }
 
@@ -49,19 +69,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 .center-button {
