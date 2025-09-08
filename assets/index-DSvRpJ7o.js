@@ -73,7 +73,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
       Skeleton code for the sun, earth, and parts of the skybox were already
           in place, as well as the camera. and the ship model was made and added
           by another team member. the rest was added in and done by me.
-    `,frameworks:["React","React Native","Typescript","Javascript","Svelte","Java"],buttons:[{label:"Demo: Solar System",url:"https://671432.github.io/SolarSystem/PlanetJumper/index.html",disabled:!1},{label:"Code: Solar System",url:"https://github.com/671432/SolarSystem",disabled:!1}]},{title:"Ray Tracing",bg:MM,images:[DM,RM],whatIsIt:`
+    `,frameworks:["OpenGL","Javascript"],buttons:[{label:"Demo: Solar System",url:"https://671432.github.io/SolarSystem/PlanetJumper/index.html",disabled:!1},{label:"Code: Solar System",url:"https://github.com/671432/SolarSystem",disabled:!1}]},{title:"Ray Tracing",bg:MM,images:[DM,RM],whatIsIt:`
       In this project I simply followed the Ray Tracing in One Weekend book
           up to chapter 12 using unity and doing everything in HLSL. Personally
           I find V1 (image with darker colors) to look better, but the ray
