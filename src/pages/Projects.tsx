@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../styles/Projects.css"; // add this file (next step)
 
 // import backgrounds/images from src/assets (hashed-safe for GH Pages)
-import frequencyBg from "../assets/projects/frequency/homepage.png";
+import frequencyBg from "../assets/Backgrounds/notes.jpg";
 import frequency1 from "../assets/projects/frequency/createGame.png";
 import frequency2 from "../assets/projects/frequency/game1.png";
 import frequency3 from "../assets/projects/frequency/game2.png";
@@ -11,32 +11,32 @@ import frequency4 from "../assets/projects/frequency/gameSettings.png";
 import frequency5 from "../assets/projects/frequency/globalSettings.png";
 import frequency6 from "../assets/projects/frequency/homepage.png";
 
-import solarBg from "../assets/projects/solarSys/moon.png";
+import solarBg from "../assets/Backgrounds/galaxy.jpg";
 import solar1 from "../assets/projects/solarSys/main.png";
 import solar2 from "../assets/projects/solarSys/moon.png";
 
-import rayTracingBg from "../assets/projects/rayTracing/v1.png";
+import rayTracingBg from "../assets/Backgrounds/unity.jpg";
 import rayTracing1 from "../assets/projects/rayTracing/v1.png";
 import rayTracing2 from "../assets/projects/rayTracing/v2.png";
 
-import ballGameBg from "../assets/projects/ballGame/ballGame.png";
+import ballGameBg from "../assets/Backgrounds/openGL.jpg";
 import ballGame1 from "../assets/projects/ballGame/ballGame.png";
 
-import PrintBg from "../assets/projects/3DPrints/mount3.png";
+import PrintBg from "../assets/Backgrounds/3DPrinting.jpg";
 import Print1 from "../assets/projects/3DPrints/plate2.png";
 import Print2 from "../assets/projects/3DPrints/mount3.png";
 import Print3 from "../assets/projects/3DPrints/Measurer.png";
 
-import marchingBg from "../assets/projects/marchingAlgorithms/meshLab.png";
+import marchingBg from "../assets/Backgrounds/terrain.jpg";
 import marching1 from "../assets/projects/marchingAlgorithms/circle.png";
 import marching2 from "../assets/projects/marchingAlgorithms/CT_scan.png";
 import marching3 from "../assets/projects/marchingAlgorithms/meshLab.png";
 import marching4 from "../assets/projects/marchingAlgorithms/head.png";
 
-import MVGameBg from "../assets/projects/2DGame/img.png";
+import MVGameBg from "../assets/Backgrounds/RPGMaker.jpg";
 import MVGame1 from "../assets/projects/2DGame/img.png";
 
-import dotNetBg from "../assets/projects/HotelSystem/WPF.png";
+import dotNetBg from "../assets/Backgrounds/NET.jpg";
 import WPF1 from "../assets/projects/HotelSystem/WPF.png";
 import Razor1 from "../assets/projects/HotelSystem/RazorHome.png";
 import Razor2 from "../assets/projects/HotelSystem/RazorMaintenance.png";
@@ -50,10 +50,10 @@ import ASP5 from "../assets/projects/HotelSystem/ASPRoomsFilter.png";
 import ASP6 from "../assets/projects/HotelSystem/ASPBooking.png";
 import ASP7 from "../assets/projects/HotelSystem/ASPReservation.png";
 
-import CppBg from "../assets/projects/trafficLight/trafficLight.png";
+import CppBg from "../assets/Backgrounds/NET.jpg";
 import traffic1 from "../assets/projects/trafficLight/trafficLight.png";
 
-import robotArmBg from "../assets/projects/robotArm/robotArm.png";
+import robotArmBg from "../assets/Backgrounds/simple.jpg";
 import robotArm1 from "../assets/projects/robotArm/robotArm.png";
 
 import websiteBg from "../assets/hero.png";
@@ -451,7 +451,7 @@ function ProjectSection({ project }: { project: Project }) {
         <p>{project.whatDidIDo}</p>
 
         <h3>Main frameworks & languages</h3>
-        <ul>
+        <ul className="project-frameworks">
           {project.frameworks.map((fw, j) => (
             <li key={j}>{fw}</li>
           ))}
@@ -478,18 +478,13 @@ function ProjectSection({ project }: { project: Project }) {
 
 export function Projects() {
   return (
-    // cancel Layout's main padding so sections can be full-bleed 100vh
     <div className="projects-root">
-      {/* Optional hero for Projects page (uses same snap/height) */}
-      <section
-        className="hero-section snap"
-        style={{
-          background:
-            "linear-gradient(#111a, #111c), radial-gradient(circle at 20% 20%, #ff69b433, transparent 60%)",
-        }}
-      >
-        <h1>Projects</h1>
-        <p>That I feel are presentable enough.</p>
+      {/* Hero for Projects page */}
+      <section className="snap">
+        <div className="hero-section">
+          <h1>Projects</h1>
+          <p>That I feel are presentable enough.</p>
+        </div>
       </section>
 
       {projects.map((p, i) => (

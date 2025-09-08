@@ -11,7 +11,6 @@ body {
 
 /* Remove the default padding of Layout's main only on the Projects page */
 .page-content .projects-root {
-  /* your Layout gives main.page-content { padding: 2rem } — cancel it here */
   margin: -2rem;           /* neutralize the parent padding */
 }
 
@@ -21,7 +20,31 @@ body {
   scroll-snap-stop: always;
 }
 
-.hero-section,
+
+.projects-hero-content h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.projects-hero-content p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+/* hero section specific to the projects page */
+.hero-section{
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+    url('../assets/hero.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100svh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* prevent repetition */
+}
+
 .project-section {
   display: flex;
   justify-content: center;
@@ -29,8 +52,8 @@ body {
   height: 100vh;
   min-height: 100svh;
   background: #111; /* fallback */
-  background-size: cover;       /* fill container */
-  background-position: center;  /* center image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat; /* prevent repetition */
 }
 
@@ -38,14 +61,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vh;
-  min-width: 60vh;
+  min-width: 20vh;
   height: 90%;
   background: rgba(20,20,20,0.35);
   border-radius: 12px;
   padding: 2rem;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* Text section scrolls if too long */
@@ -53,6 +76,22 @@ body {
   flex: 1 1 auto;
   overflow-y: auto;
   margin-bottom: 1rem;
+}
+
+.project-frameworks {
+  display: flex;
+  flex-wrap: wrap;   /* wrap to next line if too long */
+  gap: 0.5rem 1rem;  /* spacing between items */
+  list-style: none;  /* remove bullets */
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.project-frameworks li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: clamp(0.45rem, 1.45vw, 0.95rem);
 }
 
 /* Gallery row container */
@@ -67,6 +106,7 @@ body {
 .images {
   display: flex;
   flex-direction: row;
+  padding: 1rem;
   gap: 1rem;
   overflow-x: hidden;
   max-width: 100%;
@@ -127,18 +167,5 @@ body {
 
 .controls button:hover {
   background: rgba(255,255,255,0.28);
-}
-
-/* Mobile: images stack vertically */
-@media (max-width: 768px) {
-  .images {
-    flex-direction: column;
-    max-height: 40vh;
-  }
-
-  .images img {
-    max-width: 86vw;
-    max-height: 40vh;
-  }
 }
 

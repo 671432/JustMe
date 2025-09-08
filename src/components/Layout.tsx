@@ -11,12 +11,14 @@ type LayoutProps = {
 export function Layout({ children, pageTitle }: LayoutProps) {
   const location = useLocation();
   const isHome = location.pathname.replace("/JustMe", "") === "/";
+  const isProjects = location.pathname.replace("/JustMe", "") === "/projects";
 
   return (
     <>
     <div className="hero-filler" />
 
       <Navbar />
+      {!isProjects && (
       <div className="hero">
         {isHome ? (
           <div className="hero-content">
@@ -31,6 +33,7 @@ export function Layout({ children, pageTitle }: LayoutProps) {
           </div>
         ) : null}
       </div>
+      )}
       <div className="hero-filler-space" />
       <main className="page-content">{children}</main>
     </>
