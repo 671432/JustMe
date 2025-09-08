@@ -1,26 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .hero {
   background-image: url('../assets/hero.png');
   background-size: cover;
@@ -40,14 +17,9 @@ html, body {
 
 .hero-content {
   background-color: #1c1c1c75;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: clamp(1.5rem, 5vw, 3rem);
   margin: 0;
-  padding-right: 2vw;
-  padding-left: 2vw;
-  padding-bottom: 0.5vw;
+  padding: 0.5rem 2vw;
   border-radius: 1rem;
 }
 
@@ -63,25 +35,11 @@ html, body {
   font-weight: bold;
 }
 
-.hero-filler {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4.5rem;
-  background-image: url('../assets/navbar.png');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Keep layout spacing for content so things don’t jump */
 .hero-filler-space {
   height: 4.5rem; /* Same as .hero-filler-bg */
 }
 
+/* used for original projects page which used dropdown isntead of scroll-snap */
 .dropdown-container{
   display: block;
   padding-right: 20%;
@@ -96,12 +54,17 @@ html, body {
 /* On smaller screens, reduce side padding */
 @media (max-width: 766px) {
   .dropdown-container {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0 5%;
   }
 }
 
 .page-content {
+  padding: 2rem;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -116,13 +79,6 @@ html, body {
   box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
   max-width: 300px;
   margin: 2rem auto;
-}
-
-.page-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  box-sizing: border-box;
 }
 
 .socialButtons {

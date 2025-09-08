@@ -14,22 +14,30 @@ just creating a little portfolio website to show who I am and what projects I ha
 # Planned work
 
 - improove the styling for the page titles
-- add "something" (animation, images, dunno) on both sides of the title for bedazzeling.
+- add "something" (animation, images) on both sides of each title.
 - add some fx (steam card hover)
-- add icon above the dropdown relating to the project (G Major Key for frequency project, etc)
-- add fancy things on the side of the dropdowns that relates to the chosen project
-- add an option to change the dropdown layout (side by side, 1by1, etc)
+- add icon to the frameworks section
+- add icons to social page buttons
 - fix the "Socials" page
-
-# Idea dump
-
-- change the project page to use animations and fully change the window on every scroll to reflect each project individually (new background image, condense everything to fitt inside the screen)
+- make the project page scroll animation smoother
 
 # Noteworthy updates after initial publishing
 
+- refactored the projects page to use a "scroll snapping" layout
 - replaced the placeholder images
 - added a link to the website title that goes to the homepage
 - made the bottom part of the hero image scroll with the navbar
 - added a layout for mobile devices (changes depending on screen width)
 - styling of the background is now being applied to embeded pages and potentially also iOS devices
 - fixed scaling for mobile devices after changing dropdown size
+
+# image sources
+- Notes: https://www.peakpx.com/en/hd-wallpaper-desktop-vqego
+- Galaxy: https://wallpapercave.com/galaxy-wallpaper-1920x1080
+- Unity: https://www.peakpx.com/en/hd-wallpaper-desktop-ehwba
+- openGL Terrain: https://d3x0r.github.io/MarchingTetrahedra/
+- 3D Printing: https://news.mit.edu/2024/researchers-demonstrate-first-chip-based-3d-printer-0606
+- RPG Maker MV: https://www.rpgmakerweb.com/products/rpg-maker-mv
+- .NET: https://ncube.com/pros-and-cons-of-net-framework
+- Simple coding: https://www.codingal.com/coding-for-kids/coding-guides/how-can-kids-get-started-with-coding/
+- OpenGL: https://pngtree.com/freebackground/opengl-against-futuristic-black-and-blue-background-library-opengl-glow-photo_6551268.html
