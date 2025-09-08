@@ -396,7 +396,7 @@ function ProjectGallery({ images }: { images: string[] }) {
   return (
     <div className="project-gallery">
       <div className="images">
-        {visibleImages.map((img, i) => (
+        {visibleImages.map((img) => (
           <motion.img
             key={img}
             src={img}
