@@ -123,7 +123,7 @@ const projects: Project[] = [
           in place, as well as the camera. and the ship model was made and added
           by another team member. the rest was added in and done by me.
     `,
-    frameworks: ["React", "React Native", "Typescript", "Javascript", "Svelte", "Java"],
+    frameworks: ["OpenGL", "Javascript"],
     buttons: [
       {
         label: "Demo: Solar System",
