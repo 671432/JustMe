@@ -60,15 +60,16 @@ body {
 .project-inner {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 80vw;
   min-width: 20vw;
-  height: 90%;
+  height: 85vh;
   background: rgba(20,20,20,0.35);
   border-radius: 12px;
   padding: 2rem;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Text section scrolls if too long */
