@@ -22,7 +22,7 @@ export function Layout({ children, pageTitle }: LayoutProps) {
       <div className="hero">
         {isHome ? (
           <div className="hero-content">
-            <h1>Hei, I'm Justin</h1>
+            <h1>Hi, I'm Justin</h1>
             <p>
               Tech enthusiast who likes dabbling and deep diving in many things.
             </p>

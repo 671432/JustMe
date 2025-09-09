@@ -381,7 +381,7 @@ const projects: Project[] = [
 
 function ProjectGallery({ images }: { images: string[] }) {
   const [index, setIndex] = useState(0);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 1150;
 
   const next = () => setIndex((i) => (i + (isMobile ? 1 : 2)) % images.length);
   const prev = () =>
@@ -395,40 +395,37 @@ function ProjectGallery({ images }: { images: string[] }) {
 
   return (
     <div className="project-gallery">
-      <div className="images">
-        {visibleImages.map((img) => (
-          <motion.img
-            key={img}
-            src={img}
-            alt=""
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-          />
-        ))}
-      </div>
+  <div className="images">
+    {visibleImages.map((img) => (
+      <motion.img
+        key={img}
+        src={img}
+        alt=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+      />
+    ))}
+  </div>
 
-      {/* Indicators */}
-      <div className="indicators">
-        {images.map((_, i) => {
-          const isActive =
-            i >= index && i < index + visibleCount;
-          return <span key={i} className={`dot ${isActive ? "active" : ""}`} />;
-        })}
-      </div>
-
-      {/* Prev/Next buttons */}
-      {images.length > visibleCount && (
-        <div className="controls">
-          <button onClick={prev} aria-label="Previous">‹</button>
-          <button onClick={next} aria-label="Next">›</button>
-        </div>
-      )}
+  <div className="gallery-footer">
+    <div className="indicators">
+      {images.map((_, i) => {
+        const isActive = i >= index && i < index + visibleCount;
+        return <span key={i} className={`dot ${isActive ? "active" : ""}`} />;
+      })}
     </div>
+
+    {images.length > visibleCount && (
+      <div className="controls">
+        <button onClick={prev} aria-label="Previous">‹</button>
+        <button onClick={next} aria-label="Next">›</button>
+      </div>
+    )}
+  </div>
+</div>
   );
 }
-
-
 
 function ProjectSection({ project }: { project: Project }) {
   return (
@@ -483,7 +480,6 @@ export function Projects() {
       <section className="snap">
         <div className="hero-section">
           <h1>Projects</h1>
-          <p>That I feel are presentable enough.</p>
         </div>
       </section>
 
