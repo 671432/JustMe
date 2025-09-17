@@ -38,7 +38,7 @@ export function Socials() {
             )
           }
         >
-          Projects (Google Drive)
+          Google Drive
         </button>
       </div>
     </div>

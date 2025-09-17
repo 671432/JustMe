@@ -81,7 +81,8 @@ const projects: Project[] = [
     bg: frequencyBg,
     images: [frequency1, frequency2, frequency3, frequency4, frequency5, frequency6],
     whatIsIt: `
-      proof of concept project done for Styreportalen that aims to use
+    NOTE: BUTTON DISABLED DUE TO LOGGIN ISSUES.  
+    proof of concept project done for Styreportalen that aims to use
           frequencies to use real music instruments as the controller in games
           to enthuse users to learn instruments via gamification. this project
           can be compared to for example Rocksmith, but with the addition that
@@ -154,13 +155,8 @@ const projects: Project[] = [
     frameworks: ["Unity", "hlsl"],
     buttons: [
       {
-        label: "Code: V1",
-        url: "https://drive.google.com/drive/folders/1uRlPUOx3fyZresdcVmTeF3e11Jh0dCBn",
-        disabled: false,
-      },
-      {
-        label: "Code: V2",
-        url: "https://drive.google.com/drive/folders/1mXZiGEAGNbB74DBQvkwOuhibt-9arA3B",
+        label: "Code: RayTracing",
+        url: "https://github.com/671432/RayTracing",
         disabled: false,
       },
     ],
@@ -184,7 +180,7 @@ const projects: Project[] = [
     buttons: [
       {
         label: "code: Ball Game",
-        url: "https://drive.google.com/drive/folders/1wKW3-uPNcFQt37gRndr-63n3cad8lUUg",
+        url: "https://github.com/671432/BallGame",
         disabled: false,
       },
     ],
@@ -247,17 +243,17 @@ const projects: Project[] = [
     buttons: [
       {
         label: "code: 2D view",
-        url: "https://drive.google.com/drive/folders/1C0ocnUCBqQNLMuHyn5a-q3vlEmFp8LAZ",
+        url: "https://github.com/671432/MarshingSquares",
         disabled: false,
       },
       {
         label: "code: Ball.obj",
-        url: "https://drive.google.com/drive/folders/1eVFnQcxIYxt_uLcMqDyGTLjBNRdpSykt",
+        url: "https://github.com/671432/3D_Sphere_Object",
         disabled: false,
       },
       {
         label: "code: CT-Scan",
-        url: "https://drive.google.com/drive/folders/1XJSGBV0DkkJT5IlVh9a4wN5zOe8peZkz",
+        url: "https://github.com/671432/Generate_CT_Scan",
         disabled: false,
       },
     ],
@@ -301,7 +297,7 @@ const projects: Project[] = [
     buttons: [
       {
         label: "code: Hotel System",
-        url: "https://drive.google.com/drive/folders/1O-JuKsVDMPQ0uEXZ684b8YtkIsNYc1kK",
+        url: "https://github.com/671432/HotelSystem",
         disabled: false,
       },
     ],
@@ -326,7 +322,7 @@ const projects: Project[] = [
     buttons: [
       {
         label: "code: Traffic Light",
-        url: "https://drive.google.com/drive/folders/1TDLuwZmHj5PAbwTrZKUhe0_s1vUB1VHi",
+        url: "https://github.com/671432/trafficLight",
         disabled: false,
       },
     ],
@@ -346,7 +342,7 @@ const projects: Project[] = [
     buttons: [
       {
         label: "Code: Robot Arm",
-        url: "https://drive.google.com/drive/folders/178AoBPiYopZs9Blk03kEswoB3GvNja25",
+        url: "https://github.com/671432/RobotArm",
         disabled: false,
       },
     ],
