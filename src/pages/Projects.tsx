@@ -120,9 +120,8 @@ const projects: Project[] = [
           the camera but doesn't transform otherwise.
     `,
     whatDidIDo: `
-      Skeleton code for the sun, earth, and parts of the skybox were already
-          in place, as well as the camera. and the ship model was made and added
-          by another team member. the rest was added in and done by me.
+      I built upon the existing foundation (skeleton code for the sun, Earth, skybox, and camera),
+      enhancing and expanding the scene. While the ship model was contributed by a teammate, I implemented the remaining elements and brought the environment to life.
     `,
     frameworks: ["OpenGL", "Javascript"],
     buttons: [
@@ -144,14 +143,15 @@ const projects: Project[] = [
     bg: rayTracingBg,
     images: [rayTracing1, rayTracing2],
     whatIsIt: `
-      In this project I simply followed the Ray Tracing in One Weekend book
-          up to chapter 12 using unity and doing everything in HLSL. Personally
-          I find V1 (image with darker colors) to look better, but the ray
-          tracing is not properly done in some areas, hence why there is a V2.
-    `,
+  This project is a hands-on implementation of the "Ray Tracing in One Weekend" book, up to chapter 12, recreated entirely in Unity using HLSL shaders. 
+  The goal was to explore realistic light behavior, reflections, and material shading through ray tracing.
+  Version 1 (with darker colors) is my preferred aesthetic, but Version 2 improves correctness in areas where the ray tracing calculations were initially inaccurate.
+`,
     whatDidIDo: `
-      Everything.
-    `,
+  I implemented all aspects of the project from scratch, including: custom HLSL shaders for ray tracing, implementing material interactions, 
+  reflections, and basic lighting, debugging and optimizing the rendering pipeline in Unity, comparing and refining visuals between V1 and V2 to balance aesthetics and physical correctness, 
+  managing the scene setup, camera, and object placement to fully showcase the ray-traced environment.
+`,
     frameworks: ["Unity", "hlsl"],
     buttons: [
       {
@@ -167,14 +167,16 @@ const projects: Project[] = [
     bg: ballGameBg,
     images: [ballGame1],
     whatIsIt: `
-      The first "bigger" OpenGL projects I did where the player can control
-          a ball to try and avoid hitting the oncoming cubes.
+      One of my first OpenGL projects: a simple but fast-paced game 
+  where the player controls a ball and tries to dodge oncoming cubes. 
+  The focus was on building game mechanics and experimenting with rendering 
+  techniques like textures, fog, and collision detection.
     `,
     whatDidIDo: `
-      A lot of the basics were already in place, I mainly just added the
-          ball, textures, changed the cube spawn and movement, added the red
-          "fog", made my own repeating road texture, and added the collision
-          detection and game over screen.
+        While the project provided a basic OpenGL framework, I implemented most of the 
+  actual gameplay features, including: Adding and controlling the player ball, creating custom textures (like a repeating road pattern), 
+  implementing randomized cube spawning and movement logic, designing and coding the red "fog" visual effect, writing collision detection and building the game-over screen. 
+  This project helped me gain hands-on experience with OpenGL, graphics programming basics, and the structure of interactive rendering pipelines.
     `,
     frameworks: ["OpenGL", "HTML", "Javascript"],
     buttons: [
@@ -195,21 +197,7 @@ const projects: Project[] = [
           was requested to make by family and/or friends.
     `,
     whatDidIDo: `
-      I designed, tested, and refined 3D prints. An E-Scooter number plate
-          that can be screwed onto the back to have a nice place for the number
-          plate that some countries require by law. there is no screw hole as I
-          couldn't be sure where exactly to place the plate without having it in
-          hand, and later on realized that other ppl might have the same issue
-          because of the type of E-Scooter they might have, so to keep the model
-          universal, the screw hole will have to be made after the fact. a wall
-          mount for a remote controlling the roof mounted light in the house.
-          the rounded angle at the bottom on the inside, was so that the remote
-          stays upright in the mount, and the 2 holes were pilot holes for the
-          screws. a Seam measurer for a family member just because it seemed fun
-          to make and it would have a small personalized touch to it. the
-          millimeters distances are a little bit wrong because of offsets after
-          printing and my printer at the time wasn't able to print the necessary
-          details so it only looks good as a model and not in real life.
+      I designed, tested, and refined 3D prints, because it was fun, would be usefull, and teached me another skill.
     `,
     frameworks: ["Bambu Studio", "FreeCAD", "Paint.net"],
     buttons: [
@@ -226,18 +214,18 @@ const projects: Project[] = [
     bg: marchingBg,
     images: [marching1, marching2, marching3, marching4],
     whatIsIt: `
-      A "series" of projects, started with the simple 2D visuals (2D view)
-          to understand the differences between marching squares and marching
-          tetrahedrons. continuing to the next project (Ball.obj) to create and
-          save a 3D .obj file of a sphere. lastly ending with the CT-Scan
-          project which takes about 2-3 minutes to create and save a 3D .obj
-          file of the combined CT-scans.
+      This was a small series of projects exploring volume visualization and 3D modeling. 
+  It began with a 2D visualization to study the differences between marching squares 
+  and marching tetrahedrons, then moved on to generating and exporting a 3D sphere 
+  as a .obj file, and finally culminated in a CT-scan reconstruction project that 
+  combined multiple scans into a single 3D .obj file, a process that takes about 
+  2–3 minutes to complete.
     `,
     whatDidIDo: `
-      I was provided with the skeleton code for the 2D view project which
-          already had the quad used as a canvas, and the toggle, sliders, and
-          buttons that were not hooked up to anything yet. Everything after
-          this, was done by me.
+      For the 2D visualization project, I was given skeleton code that included a 
+  simple quad canvas along with unconnected toggles, sliders, and buttons. 
+  I implemented all the functionality beyond this starting point, handling 
+  the logic, interactivity, and progression into the later 3D projects.
     `,
     frameworks: ["Unity", "C#"],
     buttons: [
@@ -285,13 +273,16 @@ const projects: Project[] = [
     bg: dotNetBg,
     images: [WPF1, Razor1, Razor2, Razor3, Razor4, ASP1, ASP2, ASP3, ASP4, ASP5, ASP6, ASP7],
     whatIsIt: `
-      3 .NET projects: ASP for Customer project, Razor for Service
-          staff, WPF for Front Desk.
+      A collection of three .NET applications built for different user roles: 
+  an ASP.NET project for managing customer interactions, a Razor-based 
+  system for service staff, and a WPF desktop client designed for the 
+  front desk.
     `,
     whatDidIDo: `
-      This was a 3-man project and I did the front-end for all 3 projects,
-          as well as doing the ASP project on my own, and about half of the WPF
-          project.
+      This was a team project with three members, where I handled the front-end 
+  development across all applications to ensure a consistent and user-friendly 
+  experience. In addition, I was fully responsible for the ASP.NET project 
+  and contributed roughly half of the implementation on the WPF application.
     `,
     frameworks: ["Visual Studio", "ASP", "Razor", "WPF", "C#"],
     buttons: [
@@ -308,15 +299,16 @@ const projects: Project[] = [
     bg: CppBg,
     images: [traffic1],
     whatIsIt: `
-      a C++ project using Visual Studio. 2D visualization of an intersection, using bitmaps.
+      A C++ project built in Visual Studio: a 2D visualization of a traffic 
+  intersection, rendered using bitmaps.
     `,
     whatDidIDo: `
-      I worked closely with my group member to create the entire project,
-          focusing on how to make the bitmap work and designing the basic
-          crossroad. There should still be a hidden "easter egg" in the code,
-          which is a school buss designed with basic shapes, however we lost the
-          time to be able to finetune the logic for the shapes to properly move
-          together hence why the bus is not being used in the final product.
+      I collaborated closely with a team member to design and implement the full 
+  project. My focus was on integrating and rendering bitmaps, as well as 
+  building the base crossroad layout. As a fun extra, I also designed a 
+  school bus entirely out of basic shapes — an "easter egg" still hidden 
+  in the code. Unfortunately, we ran out of time to refine the movement 
+  logic, so the bus never made it into the final version.
     `,
     frameworks: ["Visual Studio", "C++"],
     buttons: [
@@ -333,10 +325,15 @@ const projects: Project[] = [
     bg: robotArmBg,
     images: [robotArm1],
     whatIsIt: `
-    Basic visual with sliders to transform shapes connected with joints using OpenGL.
+    An OpenGL project that visualizes a simple robotic claw: a box-shaped 
+  base, a rectangular shaft connected with circular joints, and two 
+  rectangular "claws" at the tip. Sliders were used to transform and 
+  articulate the connected parts in real time.
     `,
     whatDidIDo: `
-      I did the entire project based on skeleton code. 
+      I implemented the entire project starting from skeleton code, building 
+  the joint system, shapes, and slider-based transformations to control 
+  the claw’s movement. 
     `,
     frameworks: ["html", "Javascript"],
     buttons: [
