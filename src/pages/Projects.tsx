@@ -11,6 +11,17 @@ import frequency4 from "../assets/projects/frequency/gameSettings.png";
 import frequency5 from "../assets/projects/frequency/globalSettings.png";
 import frequency6 from "../assets/projects/frequency/homepage.png";
 
+import arBg from "../assets/Backgrounds/3DPrinting.jpg";
+import ar1 from "../assets/projects/AR/balloon1.jpeg";
+import ar2 from "../assets/projects/AR/furniture1.jpeg";
+import ar3 from "../assets/projects/AR/furniture2.jpeg";
+import ar4 from "../assets/projects/AR/portal1.jpeg";
+import ar5 from "../assets/projects/AR/portal2.jpeg";
+import ar6 from "../assets/projects/AR/portal3.jpeg";
+
+import gwBg from "../assets/Backgrounds/NET.jpg";
+import gw1 from "../assets/projects/GW2GameLink/GW2.png";
+
 import solarBg from "../assets/Backgrounds/galaxy.jpg";
 import solar1 from "../assets/projects/solarSys/main.png";
 import solar2 from "../assets/projects/solarSys/moon.png";
@@ -21,11 +32,6 @@ import rayTracing2 from "../assets/projects/rayTracing/v2.png";
 
 import ballGameBg from "../assets/Backgrounds/openGL.jpg";
 import ballGame1 from "../assets/projects/ballGame/ballGame.png";
-
-import PrintBg from "../assets/Backgrounds/3DPrinting.jpg";
-import Print1 from "../assets/projects/3DPrints/plate2.png";
-import Print2 from "../assets/projects/3DPrints/mount3.png";
-import Print3 from "../assets/projects/3DPrints/Measurer.png";
 
 import marchingBg from "../assets/Backgrounds/terrain.jpg";
 import marching1 from "../assets/projects/marchingAlgorithms/circle.png";
@@ -50,12 +56,6 @@ import ASP5 from "../assets/projects/HotelSystem/ASPRoomsFilter.png";
 import ASP6 from "../assets/projects/HotelSystem/ASPBooking.png";
 import ASP7 from "../assets/projects/HotelSystem/ASPReservation.png";
 
-import CppBg from "../assets/Backgrounds/NET.jpg";
-import traffic1 from "../assets/projects/trafficLight/trafficLight.png";
-
-import robotArmBg from "../assets/Backgrounds/simple.jpg";
-import robotArm1 from "../assets/projects/robotArm/robotArm.png";
-
 import websiteBg from "../assets/hero.png";
 import website1 from "../assets/hero.png";
 
@@ -67,11 +67,11 @@ type ProjectButton = {
 
 type Project = {
   title: string;
-  bg: string;         // background image
-  images: string[];   // gallery images
+  bg: string; // background image
+  images: string[]; // gallery images
   whatIsIt: string;
   whatDidIDo: string;
-  frameworks: string[];  // later replace with icons
+  frameworks: string[]; // later replace with icons
   buttons?: ProjectButton[];
 };
 
@@ -79,7 +79,14 @@ const projects: Project[] = [
   {
     title: "Frequency controller for tone-based games",
     bg: frequencyBg,
-    images: [frequency1, frequency2, frequency3, frequency4, frequency5, frequency6],
+    images: [
+      frequency1,
+      frequency2,
+      frequency3,
+      frequency4,
+      frequency5,
+      frequency6,
+    ],
     whatIsIt: `
     NOTE: BUTTON DISABLED DUE TO LOGGIN ISSUES.  
     proof of concept project done for Styreportalen that aims to use
@@ -97,7 +104,14 @@ const projects: Project[] = [
           assisted the other team members with problems they had a hard time
           resolving.
     `,
-    frameworks: ["React", "React Native", "Typescript", "Javascript", "Svelte", "Java"],
+    frameworks: [
+      "React",
+      "React Native",
+      "Typescript",
+      "Javascript",
+      "Svelte",
+      "Java",
+    ],
     buttons: [
       {
         label: "Demo: Frequency Controller",
@@ -105,9 +119,66 @@ const projects: Project[] = [
         disabled: true,
       },
     ],
-  }, 
+  },
   /* === Next Project ===*/
-    {
+  {
+    title: "AR Projects",
+    bg: arBg,
+    images: [ar1, ar2, ar3, ar4, ar5, ar6],
+    whatIsIt: `
+      3 Seperate Projects to see how AR development would look like. each project has been uploaded as both the Unity project, and also as an APK (link found in repos description).
+    `,
+    whatDidIDo: `
+      initially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
+    `,
+    frameworks: ["C#", "HTML", "HLSL", "Unity"],
+    buttons: [
+      {
+        label: "Code: Balloon Game",
+        url: "https://github.com/671432/AR_BalloonGame",
+        disabled: false,
+      },
+      {
+        label: "Code: Furniture App",
+        url: "https://github.com/671432/AR_FurnitureApp",
+        disabled: false,
+      },
+      {
+        label: "Code: Portal",
+        url: "https://github.com/671432/AR_Portal",
+        disabled: false,
+      },
+    ],
+  },
+  /* === Next Project ===*/
+  {
+    title: "GW2 Game Link Combiner",
+    bg: gwBg,
+    images: [gw1],
+    whatIsIt: `
+      just for funs and giggles; a tool that can combine in-game item names and look like a real item in the chat.
+
+      Players can find item links/IDs via the GW2 wiki, copy it into the tool, and it automatically gives back the new game link with a mostly accurate preview of how it will be in-game using the GW2 API.
+    `,
+    whatDidIDo: `
+      I found an older version of the algorythm posted on a forum (the source is in the Repos description), and re-created that basic version with some more styling elements aswell as turning the original HTML version, into a Typescript version.
+    `,
+    frameworks: ["Typescript", "CSS"],
+    buttons: [
+      {
+        label: "Demo: Link Combiner",
+        url: "https://671432.github.io/GW2gameLinkCombiner/",
+        disabled: false,
+      },
+      {
+        label: "Code: Link Combiner",
+        url: "https://github.com/671432/GW2gameLinkCombiner",
+        disabled: false,
+      },
+    ],
+  },
+  /* === Next Project ===*/
+  {
     title: "Solar System",
     bg: solarBg,
     images: [solar1, solar2],
@@ -137,8 +208,8 @@ const projects: Project[] = [
       },
     ],
   },
-    /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "Ray Tracing",
     bg: rayTracingBg,
     images: [rayTracing1, rayTracing2],
@@ -161,8 +232,8 @@ const projects: Project[] = [
       },
     ],
   },
-      /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "Ball Game",
     bg: ballGameBg,
     images: [ballGame1],
@@ -187,29 +258,8 @@ const projects: Project[] = [
       },
     ],
   },
-      /* === Next Project ===*/
-    {
-    title: "3D Printing",
-    bg: PrintBg,
-    images: [Print1, Print2, Print3],
-    whatIsIt: `
-      these are my own designed 3D print files for some parts I needed or
-          was requested to make by family and/or friends.
-    `,
-    whatDidIDo: `
-      I designed, tested, and refined 3D prints, because it was fun, would be usefull, and teached me another skill.
-    `,
-    frameworks: ["Bambu Studio", "FreeCAD", "Paint.net"],
-    buttons: [
-      {
-        label: "3D files",
-        url: "https://drive.google.com/drive/folders/1C8dnSkuzD6973Ge7iLs4Gq8533ty9Je8",
-        disabled: false,
-      },
-    ],
-  },
-      /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "Marching Algorithms and CT-Scan",
     bg: marchingBg,
     images: [marching1, marching2, marching3, marching4],
@@ -246,8 +296,8 @@ const projects: Project[] = [
       },
     ],
   },
-      /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "2D Game Project",
     bg: MVGameBg,
     images: [MVGame1],
@@ -267,11 +317,24 @@ const projects: Project[] = [
       },
     ],
   },
-      /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "Hotel System",
     bg: dotNetBg,
-    images: [WPF1, Razor1, Razor2, Razor3, Razor4, ASP1, ASP2, ASP3, ASP4, ASP5, ASP6, ASP7],
+    images: [
+      WPF1,
+      Razor1,
+      Razor2,
+      Razor3,
+      Razor4,
+      ASP1,
+      ASP2,
+      ASP3,
+      ASP4,
+      ASP5,
+      ASP6,
+      ASP7,
+    ],
     whatIsIt: `
       A collection of three .NET applications built for different user roles: 
   an ASP.NET project for managing customer interactions, a Razor-based 
@@ -293,69 +356,17 @@ const projects: Project[] = [
       },
     ],
   },
-        /* === Next Project ===*/
-    {
-    title: "Traffic Light",
-    bg: CppBg,
-    images: [traffic1],
-    whatIsIt: `
-      A C++ project built in Visual Studio: a 2D visualization of a traffic 
-  intersection, rendered using bitmaps.
-    `,
-    whatDidIDo: `
-      I collaborated closely with a team member to design and implement the full 
-  project. My focus was on integrating and rendering bitmaps, as well as 
-  building the base crossroad layout. As a fun extra, I also designed a 
-  school bus entirely out of basic shapes — an "easter egg" still hidden 
-  in the code. Unfortunately, we ran out of time to refine the movement 
-  logic, so the bus never made it into the final version.
-    `,
-    frameworks: ["Visual Studio", "C++"],
-    buttons: [
-      {
-        label: "code: Traffic Light",
-        url: "https://github.com/671432/trafficLight",
-        disabled: false,
-      },
-    ],
-  },
-        /* === Next Project ===*/
-    {
-    title: "Robot Arm",
-    bg: robotArmBg,
-    images: [robotArm1],
-    whatIsIt: `
-    An OpenGL project that visualizes a simple robotic claw: a box-shaped 
-  base, a rectangular shaft connected with circular joints, and two 
-  rectangular "claws" at the tip. Sliders were used to transform and 
-  articulate the connected parts in real time.
-    `,
-    whatDidIDo: `
-      I implemented the entire project starting from skeleton code, building 
-  the joint system, shapes, and slider-based transformations to control 
-  the claw’s movement. 
-    `,
-    frameworks: ["html", "Javascript"],
-    buttons: [
-      {
-        label: "Code: Robot Arm",
-        url: "https://github.com/671432/RobotArm",
-        disabled: false,
-      },
-    ],
-  },
-          /* === Next Project ===*/
-    {
+  /* === Next Project ===*/
+  {
     title: "Portfolio Website",
     bg: websiteBg,
     images: [website1],
     whatIsIt: `
-    last but not least, this website. the entire website to show of my
-          projects and myself was done by me, I started using google sites to
+    now, this isn't everything, but it is everything I'll put on this website, 
+      this website that I made to show of my projects. I started using google sites to
           make a basic website using the drag and drop feature to place
           elements, and when that was up, I started re-creating that basic
-          version properly using typescript. my experiance with typescript is
-          and was somewhat limited, but I used this as a learning experiance.
+          version properly using typescript.
     `,
     whatDidIDo: `
       Everything 
@@ -371,52 +382,54 @@ const projects: Project[] = [
   },
 ];
 
-
 function ProjectGallery({ images }: { images: string[] }) {
   const [index, setIndex] = useState(0);
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1150;
 
   const next = () => setIndex((i) => (i + (isMobile ? 1 : 2)) % images.length);
   const prev = () =>
-    setIndex(
-      (i) =>
-        (i - (isMobile ? 1 : 2) + images.length) % images.length
-    );
+    setIndex((i) => (i - (isMobile ? 1 : 2) + images.length) % images.length);
 
   const visibleCount = isMobile ? 1 : 2; // show 1 image on mobile, 2 on desktop
   const visibleImages = images.slice(index, index + visibleCount);
 
   return (
     <div className="project-gallery">
-  <div className="images">
-    {visibleImages.map((img) => (
-      <motion.img
-        key={img}
-        src={img}
-        alt=""
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-      />
-    ))}
-  </div>
-
-  <div className="gallery-footer">
-    <div className="indicators">
-      {images.map((_, i) => {
-        const isActive = i >= index && i < index + visibleCount;
-        return <span key={i} className={`dot ${isActive ? "active" : ""}`} />;
-      })}
-    </div>
-
-    {images.length > visibleCount && (
-      <div className="controls">
-        <button onClick={prev} aria-label="Previous">‹</button>
-        <button onClick={next} aria-label="Next">›</button>
+      <div className="images">
+        {visibleImages.map((img) => (
+          <motion.img
+            key={img}
+            src={img}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          />
+        ))}
       </div>
-    )}
-  </div>
-</div>
+
+      <div className="gallery-footer">
+        <div className="indicators">
+          {images.map((_, i) => {
+            const isActive = i >= index && i < index + visibleCount;
+            return (
+              <span key={i} className={`dot ${isActive ? "active" : ""}`} />
+            );
+          })}
+        </div>
+
+        {images.length > visibleCount && (
+          <div className="controls">
+            <button onClick={prev} aria-label="Previous">
+              ‹
+            </button>
+            <button onClick={next} aria-label="Next">
+              ›
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -460,7 +473,7 @@ function ProjectSection({ project }: { project: Project }) {
             ))}
           </div>
         )}
-          <ProjectGallery images={project.images} />
+        <ProjectGallery images={project.images} />
       </div>
     </motion.section>
   );
