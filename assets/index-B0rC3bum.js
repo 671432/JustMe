@@ -66,13 +66,15 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
     `,frameworks:["React","React Native","Typescript","Javascript","Svelte","Java"],buttons:[{label:"Demo: Frequency Controller",url:"https://tutti-game-development-preview.web.app/games",disabled:!0}]},{title:"AR Projects",bg:x2,images:[A2,E2,M2,D2,R2,w2],whatIsIt:`
       3 Seperate Projects to see how AR development would look like. each project has been uploaded as both the Unity project, and also as an APK (link found in repos description).
     `,whatDidIDo:`
-      initially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
+      Tnitially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
     `,frameworks:["C#","HTML","HLSL","Unity"],buttons:[{label:"Code: Balloon Game",url:"https://github.com/671432/AR_BalloonGame",disabled:!1},{label:"Code: Furniture App",url:"https://github.com/671432/AR_FurnitureApp",disabled:!1},{label:"Code: Portal",url:"https://github.com/671432/AR_Portal",disabled:!1}]},{title:"GW2 Game Link Combiner",bg:Ny,images:[C2],whatIsIt:`
-      just for funs and giggles; a tool that can combine in-game item names and look like a real item in the chat.
+      A tool that can combine in-game item names and look like a real item in the chat.
 
       Players can find item links/IDs via the GW2 wiki, copy it into the tool, and it automatically gives back the new game link with a mostly accurate preview of how it will be in-game using the GW2 API.
     `,whatDidIDo:`
-      I found an older version of the algorythm posted on a forum (the source is in the Repos description), and re-created that basic version with some more styling elements aswell as turning the original HTML version, into a Typescript version.
+      I found an older version of the algorythm posted on a forum (the source is in the Repos description), 
+      and re-created that basic version ontop of adding API integrations to fetch the icon that would be displayed in-game according to the items used. 
+      As well as adding styling elements and turning the original HTML version into a Typescript version.
     `,frameworks:["Typescript","CSS"],buttons:[{label:"Demo: Link Combiner",url:"https://671432.github.io/GW2gameLinkCombiner/",disabled:!1},{label:"Code: Link Combiner",url:"https://github.com/671432/GW2gameLinkCombiner",disabled:!1}]},{title:"Solar System",bg:O2,images:[V2,j2],whatIsIt:`
       A not-to-scale version of our solar system with a basic rotation
           equation for the planets to rotate and also spin around the sun using
