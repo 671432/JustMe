@@ -129,7 +129,7 @@ const projects: Project[] = [
       3 Seperate Projects to see how AR development would look like. each project has been uploaded as both the Unity project, and also as an APK (link found in repos description).
     `,
     whatDidIDo: `
-      initially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
+      Tnitially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
     `,
     frameworks: ["C#", "HTML", "HLSL", "Unity"],
     buttons: [
@@ -156,12 +156,14 @@ const projects: Project[] = [
     bg: gwBg,
     images: [gw1],
     whatIsIt: `
-      just for funs and giggles; a tool that can combine in-game item names and look like a real item in the chat.
+      A tool that can combine in-game item names and look like a real item in the chat.
 
       Players can find item links/IDs via the GW2 wiki, copy it into the tool, and it automatically gives back the new game link with a mostly accurate preview of how it will be in-game using the GW2 API.
     `,
     whatDidIDo: `
-      I found an older version of the algorythm posted on a forum (the source is in the Repos description), and re-created that basic version with some more styling elements aswell as turning the original HTML version, into a Typescript version.
+      I found an older version of the algorythm posted on a forum (the source is in the Repos description), 
+      and re-created that basic version ontop of adding API integrations to fetch the icon that would be displayed in-game according to the items used. 
+      As well as adding styling elements and turning the original HTML version into a Typescript version.
     `,
     frameworks: ["Typescript", "CSS"],
     buttons: [
