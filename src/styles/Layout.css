@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('../assets/hero.png');
+  background-image: url("../assets/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,12 +21,14 @@
   margin: 0;
   padding: 0.5rem 2vw;
   border-radius: 1rem;
+  border: 2px solid transparent;
+  border-color: #ff69b4;
 }
 
 .hero h1 {
   font-size: clamp(1.5rem, 2vw, 2rem);
   display: inline-block;
-  width: fit-content;  
+  width: fit-content;
   max-width: 100%;
 }
 
@@ -35,12 +37,8 @@
   font-weight: bold;
 }
 
-.hero-filler-space {
-  height: 4.5rem; /* Same as .hero-filler-bg */
-}
-
 /* used for original projects page which used dropdown isntead of scroll-snap */
-.dropdown-container{
+.dropdown-container {
   display: block;
   padding-right: 20%;
   padding-left: 20%;
@@ -68,44 +66,63 @@
   padding: 2rem;
 }
 
-/* container for social buttons */
-.container {
-  text-align: center;
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
-  max-width: 300px;
-  margin: 2rem auto;
+/* social section */
+.social-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.socialButtons {
-  display: block;
-  width: 100%;
-  max-width: 220px;
-  margin: 12px auto;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  color: white;
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.social-item:hover .socialButton {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}
+
+.social-item:hover .label {
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+  color: #ff69b4;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff69b4;
+  border-radius: 50%;
+  background-color: #ffffff;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Poppins', sans-serif;
+  transition: all 0.25s ease;
 }
 
-.socialButtons:hover {
-  border-color: #ffffff;
+.socialButton:hover {
+  transform: translateY(-3px);
 }
 
-.socialButtons:focus,
-.socialButtons:focus-visible {
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+/* Focus outline for accessibility */
+.socialButton:focus,
+.socialButton:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-.youtube { background-color: #FF0000; }
-.github { background-color: #0D1117; }
-.linkedin, .shows { background-color: #0A66C2; }
-.projects { background-color: #1f1f1f; }

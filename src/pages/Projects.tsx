@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "../styles/Projects.css"; // add this file (next step)
+import { createPortal } from "react-dom";
+import "../styles/Projects.css"; // add this file
 
 // import backgrounds/images from src/assets (hashed-safe for GH Pages)
 import frequencyBg from "../assets/Backgrounds/notes.jpg";
@@ -386,6 +387,7 @@ const projects: Project[] = [
 
 function ProjectGallery({ images }: { images: string[] }) {
   const [index, setIndex] = useState(0);
+  const [zoomedImg, setZoomedImg] = useState<string | null>(null);
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1150;
 
   const next = () => setIndex((i) => (i + (isMobile ? 1 : 2)) % images.length);
@@ -396,42 +398,62 @@ function ProjectGallery({ images }: { images: string[] }) {
   const visibleImages = images.slice(index, index + visibleCount);
 
   return (
-    <div className="project-gallery">
-      <div className="images">
-        {visibleImages.map((img) => (
-          <motion.img
-            key={img}
-            src={img}
-            alt=""
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-          />
-        ))}
-      </div>
-
-      <div className="gallery-footer">
-        <div className="indicators">
-          {images.map((_, i) => {
-            const isActive = i >= index && i < index + visibleCount;
-            return (
-              <span key={i} className={`dot ${isActive ? "active" : ""}`} />
-            );
-          })}
+    <>
+      <div className="project-gallery">
+        <div className="images">
+          {visibleImages.map((img) => (
+            <motion.img
+              key={img}
+              src={img}
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              onClick={() => setZoomedImg(img)}
+              className="clickable-img"
+            />
+          ))}
         </div>
 
-        {images.length > visibleCount && (
-          <div className="controls">
-            <button onClick={prev} aria-label="Previous">
-              ‹
-            </button>
-            <button onClick={next} aria-label="Next">
-              ›
-            </button>
+        <div className="gallery-footer">
+          <div className="indicators">
+            {images.map((_, i) => {
+              const isActive = i >= index && i < index + visibleCount;
+              return (
+                <span key={i} className={`dot ${isActive ? "active" : ""}`} />
+              );
+            })}
           </div>
-        )}
+
+          {images.length > visibleCount && (
+            <div className="controls">
+              <button onClick={prev} aria-label="Previous">
+                ‹
+              </button>
+              <button onClick={next} aria-label="Next">
+                ›
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      {/* Overlay for zoomed image */}
+      {zoomedImg &&
+        createPortal(
+          <div className="overlay" onClick={() => setZoomedImg(null)}>
+            <motion.img
+              src={zoomedImg}
+              alt="Zoomed project"
+              className="overlay-img"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>,
+          document.body // to render directly inside body instead of displaying zoomed image inside the container.
+        )}
+    </>
   );
 }
 

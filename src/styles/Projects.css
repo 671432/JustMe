@@ -1,5 +1,6 @@
 /* Make the page (body) the one and only scroll container with snapping */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -11,7 +12,7 @@ body {
 
 /* Remove the default padding of Layout's main only on the Projects page */
 .page-content .projects-root {
-  margin: -2rem;           /* neutralize the parent padding */
+  margin: -2rem; /* neutralize the parent padding */
 }
 
 /* Every full-screen section snaps */
@@ -19,7 +20,6 @@ body {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
-
 
 .projects-hero-content h1 {
   font-size: clamp(2rem, 4vw, 4rem);
@@ -31,10 +31,9 @@ body {
 }
 
 /* hero section specific to the projects page */
-.hero-section{
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
-    url('../assets/hero.png');
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("../assets/hero.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,13 +62,16 @@ body {
   width: 80vw;
   min-width: 20vw;
   height: 80vh;
-  background: rgba(20,20,20,0.35);
+  background: rgba(20, 20, 20, 0.35);
   border-radius: 12px;
   padding: 2rem;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   overflow-y: auto;
   overflow-x: hidden;
+  border: 2px solid transparent;
+  border-color: #ff69b4;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
 }
 
 /* Text section scrolls if too long */
@@ -81,9 +83,9 @@ body {
 
 .project-frameworks {
   display: flex;
-  flex-wrap: wrap;   /* wrap to next line if too long */
-  gap: 0.5rem 1rem;  /* spacing between items */
-  list-style: none;  /* remove bullets */
+  flex-wrap: wrap; /* wrap to next line if too long */
+  gap: 0.5rem 1rem; /* spacing between items */
+  list-style: none; /* remove bullets */
   padding: 0;
   margin: 1rem 0;
 }
@@ -109,19 +111,19 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex: 0 0 auto;           /* don't stretch, use fixed space */
+  flex: 0 0 auto; /* don't stretch, use fixed space */
   height: clamp(150px, 30vh, 400px); /* consistent height */
-  overflow: hidden;         
+  overflow: hidden;
   padding: 1rem;
 }
 
 .images img {
   flex-shrink: 0;
   max-width: clamp(200px, 40vw, 600px);
-  max-height: 100%;         /* lock to container height */
+  max-height: 100%; /* lock to container height */
   object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 6px 22px rgba(0,0,0,.5);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
 }
 
 /* indicators + controls for images always stay at bottom */
@@ -132,7 +134,6 @@ body {
   margin-top: auto;
   padding-top: 0.5rem;
 }
-
 
 /* Dots below */
 .indicators {
@@ -151,7 +152,7 @@ body {
 }
 
 .dot.active {
-  background: #FF69B4;
+  background: #ff69b4;
   opacity: 1;
 }
 
@@ -164,9 +165,9 @@ body {
 }
 
 .controls button {
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.18);
   border: none;
-  color: #FF69B4;
+  color: #ff69b4;
   font-size: 1.25rem;
   line-height: 1;
   padding: 0.35rem 0.75rem;
@@ -175,8 +176,37 @@ body {
 }
 
 .controls button:hover {
-  background: rgba(255,255,255,0.28);
+  background: rgba(255, 255, 255, 0.28);
 }
 
+/* Zoom project images */
+.clickable-img {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
 
+.clickable-img:hover {
+  transform: scale(1.05);
+}
 
+.overlay {
+  position: fixed; /* relative to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+.overlay-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}

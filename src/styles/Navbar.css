@@ -53,12 +53,17 @@
 
 .navbar-right li a {
   text-decoration: none;
-  color: inherit;
+  background-color: #0000005e;
   font-weight: 500;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2rem;
 }
 
 .navbar-right li a:hover {
   background-color: #81494e;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+  text-shadow: 0 0 6px rgba(255, 105, 180, 0.8);
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 2rem;
