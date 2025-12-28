@@ -11,16 +11,16 @@ export function Home() {
         </p>
 
         <p>
-          Over the years, I’ve explored a wide range of tech-related projects —
-          from scripting tools that automate daily tasks to creating small
+          Over the years, I’ve explored a wide range of tech related projects.
+          From scripting tools that automate daily tasks to creating small
           applications, experimenting with game development, and working with 3D
           modeling and printing.
         </p>
 
         <p>
           I enjoy learning new frameworks and tools, and I’m especially drawn to
-          building solutions that make complex systems more efficient or
-          user-friendly.
+          building solutions that make complex systems more efficient or user
+          friendly.
         </p>
 
         <button className="center-button" onClick={() => navigate("/projects")}>

@@ -33,7 +33,7 @@ just creating a little portfolio website to show who I am and what projects I ha
 - styling of the background is now being applied to embeded pages and iOS devices
 - fixed scaling for mobile devices after changing project dropdown size (dropdown menu removed in favor of scroll snapping layout)
 - changed the styling to have a better "pop" factor
-- add icons to social page buttons
+- added icons to social page buttons
 - added feature to click on project images to show a larger version
 
 # image sources

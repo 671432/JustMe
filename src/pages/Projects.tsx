@@ -130,7 +130,7 @@ const projects: Project[] = [
       3 Seperate Projects to see how AR development would look like. each project has been uploaded as both the Unity project, and also as an APK (link found in repos description).
     `,
     whatDidIDo: `
-      Tnitially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
+      Initially following a course, but also experimenting with a few aspects and applying the courses somewhat outdated information, to todays versions of the tools.
     `,
     frameworks: ["C#", "HTML", "HLSL", "Unity"],
     buttons: [
