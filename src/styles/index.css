@@ -125,9 +125,13 @@ button:focus-visible {
 
 .lead {
   font-size: 1.35rem;
-  font-weight: 500;
+  font-weight: bolder;
 }
 
 .muted {
   color: #8a8a8a;
+}
+
+.ul-li {
+  font-weight: bold;
 }

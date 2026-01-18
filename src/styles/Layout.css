@@ -126,3 +126,7 @@
 .socialButton:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.hobby-list li {
+  font-weight: bold;
+}

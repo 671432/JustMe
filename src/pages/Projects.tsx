@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
-import "../styles/Projects.css"; // add this file
+import "../styles/Projects.css";
 
 // import backgrounds/images from src/assets (hashed-safe for GH Pages)
 import frequencyBg from "../assets/Backgrounds/notes.jpg";
@@ -450,7 +450,7 @@ function ProjectGallery({ images }: { images: string[] }) {
               transition={{ duration: 0.3 }}
             />
           </div>,
-          document.body // to render directly inside body instead of displaying zoomed image inside the container.
+          document.body, // to render directly inside body instead of displaying zoomed image inside the container.
         )}
     </>
   );

@@ -4,8 +4,8 @@ export function Home() {
   const navigate = useNavigate();
 
   return (
-    <section className="page home">
-      <div className="content-card">
+    <section className="page">
+      <div>
         <p className="lead">
           I’m a versatile developer with a broad interest in technology.
         </p>
