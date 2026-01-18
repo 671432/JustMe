@@ -38,7 +38,7 @@ h1 {
   font-size: (0.85rem, 2.5vw, 1.65rem);
   line-height: 1.1;
   color: rgb(255, 105, 180);
-  text-shadow: 0 0 6px rgba(255, 105, 180, 0.8);
+  text-shadow: 0 0 6px rgba(255, 105, 180, 0.6);
 }
 
 h2,

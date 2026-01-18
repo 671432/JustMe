@@ -365,11 +365,10 @@ const projects: Project[] = [
     bg: websiteBg,
     images: [website1],
     whatIsIt: `
-    now, this isn't everything, but it is everything I'll put on this website, 
-      this website that I made to show of my projects. I started using google sites to
+    Lastly, this website is to show my projects. I started using google sites to
           make a basic website using the drag and drop feature to place
-          elements, and when that was up, I started re-creating that basic
-          version properly using typescript.
+          elements, when that was up I started re-creating that basic
+          version properly using typescript and continued to expand on ideas.
     `,
     whatDidIDo: `
       Everything 

@@ -15,26 +15,27 @@ export function Layout({ children, pageTitle }: LayoutProps) {
 
   return (
     <>
-    <div className="hero-filler" />
+      <div />
 
       <Navbar />
       {!isProjects && (
-      <div className="hero">
-        {isHome ? (
-          <div className="hero-content">
-            <h1>Hi, I'm Justin</h1>
-            <p>
-              Tech enthusiast who likes dabbling and deep diving in many things.
-            </p>
-          </div>
-        ) : pageTitle ? (
-          <div className="hero-content">
-            <h1>{pageTitle}</h1>
-          </div>
-        ) : null}
-      </div>
+        <div className="hero">
+          {isHome ? (
+            <div className="hero-content">
+              <h1>Hi, I'm Justin</h1>
+              <p>
+                Tech enthusiast who likes dabbling and deep diving in many
+                things.
+              </p>
+            </div>
+          ) : pageTitle ? (
+            <div className="hero-content">
+              <h1>{pageTitle}</h1>
+            </div>
+          ) : null}
+        </div>
       )}
-      <div className="hero-filler-space" />
+      <div />
       <main className="page-content">{children}</main>
     </>
   );
