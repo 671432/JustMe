@@ -1,12 +1,12 @@
-import GitHubIcon from "../assets/icons/github.svg";
-import YouTubeIcon from "../assets/icons/youtube.svg";
-import LinkedInIcon from "../assets/icons/linkedin.svg";
-import DriveIcon from "../assets/icons/googledrive.svg";
+import GitHubIcon from "../assets/icons/github.svg?react";
+import YouTubeIcon from "../assets/icons/youtube.svg?react";
+import LinkedInIcon from "../assets/icons/linkedin.svg?react";
+import DriveIcon from "../assets/icons/googledrive.svg?react";
 
 interface Social {
   name: string;
   url: string;
-  Icon: string;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
 export function Socials() {
@@ -32,20 +32,24 @@ export function Socials() {
   return (
     <div className="page-container">
       <div className="container social-container">
-        {socials.map(({ name, url, Icon }) => (
-          <div key={name} className="social-item">
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="socialButton"
-              title={url}
-            >
-              <img src={Icon} alt={name} className="icon" />
-            </a>
-            <span className="label">{name}</span>
-          </div>
-        ))}
+        {socials.map(({ name, url, Icon }) => {
+          const key = name.toLowerCase().replace(/\s+/g, "");
+
+          return (
+            <div key={name} className="social-item">
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="socialButton"
+                title={url}
+              >
+                <Icon className={`icon ${key}-icon`} />
+              </a>
+              <span className="label">{name}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

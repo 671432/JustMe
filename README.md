@@ -47,4 +47,5 @@ just creating a little portfolio website to show who I am and what projects I ha
 - .NET: https://ncube.com/pros-and-cons-of-net-framework
 - OpenGL: https://pngtree.com/freebackground/opengl-against-futuristic-black-and-blue-background-library-opengl-glow-photo_6551268.html
 - .svg (YT, Git, Google Drive): https://simpleicons.org/
-- linkedin svg: https://www.svgrepo.com/svg/157006/linkedin
+- old linkedin svg: https://www.svgrepo.com/svg/157006/linkedin
+- new linkedin, Google Drive svg: Creator wishes to stay anonymous for now

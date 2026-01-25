@@ -81,6 +81,15 @@
   transition: all 0.25s ease;
 }
 
+.icon {
+  width: 32px;
+  height: 32px;
+  color: rgb(0, 0, 0);
+  transition:
+    color 0.25s ease,
+    filter 0.25s ease;
+}
+
 .social-item:hover .socialButton {
   box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
 }
@@ -88,6 +97,34 @@
 .social-item:hover .label {
   text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
   color: #ff69b4;
+}
+
+.social-item:hover .icon {
+  filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.6));
+}
+
+.social-item:hover .youtube-icon {
+  color: #ff0000;
+}
+
+.social-item:hover .github-icon {
+  color: #38008d;
+}
+
+.social-item:hover .linkedin-icon {
+  color: #0a66c2;
+}
+
+.social-item:hover .googledrive-icon .drive-yellow {
+  fill: #fbbc05;
+}
+
+.social-item:hover .googledrive-icon .drive-blue {
+  fill: #4285f4;
+}
+
+.social-item:hover .googledrive-icon .drive-green {
+  fill: #34a853;
 }
 
 .socialButton {
@@ -105,11 +142,6 @@
 
 .socialButton:hover {
   transform: translateY(-3px);
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
 }
 
 .label {
