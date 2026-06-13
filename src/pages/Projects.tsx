@@ -59,6 +59,7 @@ import ASP7 from "../assets/projects/HotelSystem/ASPReservation.png";
 
 import websiteBg from "../assets/hero.png";
 import website1 from "../assets/hero.png";
+import { useIsMobile } from "../hooks/IsMobile";
 
 type ProjectButton = {
   label: string;
@@ -386,42 +387,55 @@ const projects: Project[] = [
 
 function ProjectGallery({ images }: { images: string[] }) {
   const [index, setIndex] = useState(0);
-  const [zoomedImg, setZoomedImg] = useState<string | null>(null);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 1150;
-
-  const next = () => setIndex((i) => (i + (isMobile ? 1 : 2)) % images.length);
-  const prev = () =>
-    setIndex((i) => (i - (isMobile ? 1 : 2) + images.length) % images.length);
+  const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const visibleCount = isMobile ? 1 : 2; // show 1 image on mobile, 2 on desktop
+  const pageCount = Math.ceil(images.length / visibleCount);
+  const currentPage = Math.floor(index / visibleCount);
+
+  const next = () => setIndex((i) => (i + visibleCount) % images.length);
+  const prev = () =>
+    setIndex((i) => (i - visibleCount + images.length) % images.length);
+
   const visibleImages = images.slice(index, index + visibleCount);
+
+  const zoomNext = () =>
+    setZoomedIndex((i) => (i === null ? null : (i + 1) % images.length));
+  const zoomPrev = () =>
+    setZoomedIndex((i) =>
+      i === null ? null : (i - 1 + images.length) % images.length,
+    );
 
   return (
     <>
       <div className="project-gallery">
         <div className="images">
-          {visibleImages.map((img) => (
-            <motion.img
-              key={img}
-              src={img}
-              alt=""
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-              onClick={() => setZoomedImg(img)}
-              className="clickable-img"
-            />
-          ))}
+          {visibleImages.map((img) => {
+            const imgIndex = images.indexOf(img);
+            return (
+              <motion.img
+                key={img}
+                src={img}
+                alt=""
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                onClick={() => setZoomedIndex(imgIndex)}
+                className="clickable-img"
+              />
+            );
+          })}
         </div>
 
         <div className="gallery-footer">
           <div className="indicators">
-            {images.map((_, i) => {
-              const isActive = i >= index && i < index + visibleCount;
-              return (
-                <span key={i} className={`dot ${isActive ? "active" : ""}`} />
-              );
-            })}
+            {Array.from({ length: pageCount }, (_, i) => (
+              <span
+                key={i}
+                className={`dot ${i === currentPage ? "active" : ""}`}
+              />
+            ))}
           </div>
 
           {images.length > visibleCount && (
@@ -438,19 +452,47 @@ function ProjectGallery({ images }: { images: string[] }) {
       </div>
 
       {/* Overlay for zoomed image */}
-      {zoomedImg &&
+      {zoomedIndex !== null &&
         createPortal(
-          <div className="overlay" onClick={() => setZoomedImg(null)}>
+          <div className="overlay" onClick={() => setZoomedIndex(null)}>
+            {images.length > 1 && (
+              <button
+                className="overlay-nav overlay-nav-left"
+                aria-label="Previous image"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  zoomPrev();
+                }}
+              >
+                ‹
+              </button>
+            )}
+
             <motion.img
-              src={zoomedImg}
+              key={images[zoomedIndex]}
+              src={images[zoomedIndex]}
               alt="Zoomed project"
               className="overlay-img"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
             />
+
+            {images.length > 1 && (
+              <button
+                className="overlay-nav overlay-nav-right"
+                aria-label="Next image"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  zoomNext();
+                }}
+              >
+                ›
+              </button>
+            )}
           </div>,
-          document.body, // to render directly inside body instead of displaying zoomed image inside the container.
+          document.body,
         )}
     </>
   );

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Redirecting</title>
+    <script>
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/JustMe/'" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1a1a1a;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #ff69b4;
+      }
+
+      p {
+        font-size: 1rem;
+        color: white;
+      }
+
+      a {
+        color: #ff69b4;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      a:hover {
+        text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>404</h1>
+      <p>
+        Trying to redirect you, if nothing happens
+        <a href="https://671432.github.io/JustMe/">please click here</a>.
+      </p>
+    </div>
+  </body>
+</html>

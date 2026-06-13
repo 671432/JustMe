@@ -50,9 +50,17 @@
 }
 
 /* On smaller screens, reduce side padding */
-@media (max-width: 766px) {
+@media (max-width: 1150px) {
   .dropdown-container {
     padding: 0 5%;
+  }
+  .social-container {
+    max-width: 200px; /* 2 * 60px icons + 2rem gap + some breathing room */
+    margin: 0 auto;
+  }
+
+  .social-item {
+    flex: 0 0 calc(50% - 1rem);
   }
 }
 
@@ -151,6 +159,7 @@
   color: white;
   text-align: center;
   transition: all 0.25s ease;
+  max-width: 60px;
 }
 
 /* Focus outline for accessibility */

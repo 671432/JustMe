@@ -32,7 +32,8 @@ body {
 
 /* hero section specific to the projects page */
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
     url("../assets/hero.png");
   display: flex;
   justify-content: center;
@@ -175,6 +176,10 @@ body {
   cursor: pointer;
 }
 
+.controls button:focus {
+  outline: 2px solid #ff69b4;
+}
+
 .controls button:hover {
   background: rgba(255, 255, 255, 0.28);
 }
@@ -191,6 +196,7 @@ body {
 }
 
 .overlay {
+  /* position: relative; */
   position: fixed; /* relative to viewport */
   top: 0;
   left: 0;
@@ -209,4 +215,29 @@ body {
   max-height: 90vh;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+}
+
+.overlay-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.18);
+  color: #ff69b4;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.overlay-nav:focus {
+  outline: 2px solid #ff69b4;
+}
+
+.overlay-nav-left {
+  left: 1rem;
+}
+
+.overlay-nav-right {
+  right: 1rem;
 }
