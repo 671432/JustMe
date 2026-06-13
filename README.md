@@ -9,22 +9,21 @@ just creating a little portfolio website to show who I am and some of my project
 # Known issues
 
 - some styling aspects of the buttons aren't being applied on iOS devices
-- copy/pasting the link to anything other then "671432.github.io/JustMe/" results in a page not found error ( for example: "671432.github.io/JustMe/projects" results in an error)
-- SVGR module is installed but not properly configured for ReactComponent imports.
 
 # Planned work
 
 - improove the styling for the page titles
 - add some fx
 - add icon to the frameworks section
-- fix the "Socials" page
-- make the project page scroll animation smoother
 - cleanup code (remove unused styling, combine repeating styles)
 - "redesign" .css to be more consistant and automated
 - add proper comments to code (docs)
 
 # Noteworthy updates after initial publishing
 
+- copy/pasting the link to anything other then "671432.github.io/JustMe/" resulted in a page not found error, this is now fixed.
+- adjusted/improved the "Socials" page
+- SVGR module is installed and now properly configured for ReactComponent imports.
 - refactored the projects page to use a "scroll snapping" layout
 - replaced the placeholder images
 - added a link to the website title that goes to the homepage

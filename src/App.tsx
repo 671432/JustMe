@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
 import { AboutMe } from "./pages/AboutMe";
 import { Socials } from "./pages/Socials";
+import { NotFound } from "./pages/NotFound";
 
 const basename = "/JustMe/";
 
@@ -41,6 +42,14 @@ function App() {
           element={
             <Layout pageTitle=" Socials & Projects ">
               <Socials />
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout pageTitle=" 404 ">
+              <NotFound />
             </Layout>
           }
         />
