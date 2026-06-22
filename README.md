@@ -1,3 +1,11 @@
+> [!WARNING]
+> **This repository has moved**<br />
+> This GitHub repo is no longer actively maintained and will not receive further updates.<br />
+> Development has moved to GitLab: 
+> **[JustMe](https://gitlab.com/MasterRaxer/JustMe)**
+
+[![Moved to GitLab](https://img.shields.io/badge/Moved%20to-GitLab-orange?logo=gitlab)](https://gitlab.com/MasterRaxer/JustMe)
+
 # JustMe
 
 Static Page: https://671432.github.io/JustMe/
